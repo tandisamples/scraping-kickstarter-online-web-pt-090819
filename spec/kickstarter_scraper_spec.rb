@@ -1,3 +1,8 @@
+require 'nokogiri' 
+
+html = File.read('fixtures/kickstarter.html')
+kickstarter = Nokogiri::HTML(html)
+
 describe "#create_project_hash" do
 
   it "can be called on with no errors" do
